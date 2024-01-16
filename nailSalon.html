@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#hands{
+			width:500px;
+			height:500px;
+			background-image:url(blanknails.png);
+			background-size:contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			
+		}
+		.naildesign{
+			width:100px;
+			height:100px;
+			border:1px solid black;
+			display:inline-block;
+			margin:5px;
+			background-size:contain;
+		background-position:center;
+			background-repeat: no-repeat;
+
+		}
+
+
+
+		#one{
+			background-image:url(sparkles1.png);
+			background-color:black;
+		}
+
+		#two{
+			background-image:url(dots.png);
+		}
+
+		#three{
+			background-image:url(lips.png);
+		}
+		#four{
+			background-image:url(eyelash1.png);
+		}
+
+		#five{
+			background-image:url(eyelash2.png);
+		}
+	</style>
+</head>
+<body>
+
+	<div id="one" class="topping"></div>
+	<div id="two" class="topping"></div>
+	<div id="three" class="topping"></div>
+	<div id="four"class="topping"></div>
+	<div id="five" class="topping"></div>
+	<div id="six" class="topping"></div>
+	<div id="seven" class="topping"></div>
+	<div id="eight"class="topping"></div>
+
+
+	<div id="hands"></div>
+
+
+
+<script type="text/javascript">
+var feature;
+	
+	one.addEventListener("click", function(){
+		feature = "sparkles1.png"
+		console.log(feature)
+
+	})
+		two.addEventListener("click", function(){
+		feature = "dots.png"
+				console.log(feature)
+	})
+			three.addEventListener("click", function(){
+		feature = "lips.png"
+			console.log(feature)
+})
+
+	face.addEventListener("click", 
+
+		function makeDiv (event){
+		var facepart = document.createElement('div');
+		document.body.appendChild(facepart)
+		facepart.classList.add('topping')
+		facepart.style.position = "absolute"
+
+		//sets position of div to be where mouse is//
+		facepart.style.left = event.clientX-50 +"px"
+		facepart.style.top = event.clientY-50 +"px"
+		facepart.style.border = "0px"
+
+		//sets the backgorund image//
+		facepart.style.backgroundImage = "url("+ feature	+")"
+	})
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
