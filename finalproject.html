@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  
+  <style type="text/css">
+    @font-face {
+      font-family: handwriting;
+      src: url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet');
+    }
+
+    body {
+      font-family: handwriting, monospace;
+      margin: 0;
+      padding: 0;
+      font-size: 35px;
+      background-color: lavender;
+    }
+
+    p{
+      font-family: handwriting, monospace;
+      margin: 10px;
+      padding: 0;
+      font-size: 45px;
+      background-color: lavender;
+ 
+    }
+
+    #picture {
+      width: 750px;
+      height: 600px;
+      margin-top: 50px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: lavender;
+      position: relative;
+      background-position: center;
+      margin-right: 20px;
+      margin-bottom: 50px;
+      z-index: -1;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: -30px;
+      left: 20px;
+      color: black;
+      font-size: 35px;
+    }
+
+    .button{
+  width: 100px;
+  height: 70px;
+  margin: 15px;
+  left: 480px;
+  background-color: lightskyblue;
+  position: relative;
+  float:left;
+  background-position: center;
+  border-radius: 10px;
+    }
+
+a:link {
+  color: black;
+}
+a:hover {
+  color: lavender;
+}
+
+
+
+  </style>
+
+</head>
+<body>
+
+  <center>
+
+<p> My Moroccan Recipe Book
+<br>
+traditional Moroccan dishes and their recipes
+<br>
+Libero/DS<br>
+#2/#4
+</p>
+    <div id="picture">
+      <div class="caption"></div>
+    </div>
+
+    <script type="text/javascript">
+      var clickcounter = 0;
+
+      document.addEventListener('keydown', function (event) {
+        if (event.code === 'Space') {
+          clickcounter = clickcounter + 1;
+          console.log(clickcounter);
+          var picture = document.getElementById('picture');
+          var caption = picture.querySelector('.caption');
+
+          picture.style.width = '800px';
+          picture.style.height = '650px';
+          picture.style.position = 'relative';
+          picture.style.marginTop = '50px';
+          picture.style.backgroundSize = 'contain';
+          picture.backgroundPosition = 'center';
+
+          if (clickcounter === 1) {
+            picture.style.backgroundImage = 'url(vbpic1.png)';
+            caption.textContent = 'NYC Juniors 12 Travel, the first year I played volleyball';
+          }
+          if (clickcounter === 2) {
+            picture.style.backgroundImage = 'url(12s.png)';
+            caption.textContent = 'NYC Juniors 14 Travel. Second year playing';
+          }
+          if (clickcounter === 3) {
+            picture.style.backgroundImage = 'url(vbpic3.png)';
+            caption.textContent = 'GCDS Varsity Volleyball, Dig Pink game, Freshman Year';
+          }
+          if (clickcounter === 4) {
+            picture.style.backgroundImage = 'url(vbpic5.png)';
+            caption.textContent = 'Evergreen Volleyball Academy 15 Elite at AAU Nationals';
+          }
+          if (clickcounter === 5) {
+          picture.style.backgroundImage = 'url(vbpic4.png)';
+          caption.textContent="Dalton Varsity Volleyball, Homecoming, sophomore year"
+          clickcounter = clickcounter - 5;
+
+
+        }
+        }
+      });
+    </script>
+<a href=sr.html >
+<div id=sr class=button>serve receive</div>
+</a>
+<a href=dig.html>
+<div id=digs class=button>defense</div>
+</a>
+<a href=set.html>
+<div id=sets class=button>setting</div>
+</a>
+<a href=serve.html>
+<div id=serve class=button>serving</div>
+</a>
+
+  </center>
+</body>
+</html>
